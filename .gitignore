@@ -1,0 +1,55 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+error_log
+
+# Cache and temporary files
+*.cache
+*.tmp
+*.temp
+/cache/
+/temp/
+
+# Uploaded files
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# Configuration files with sensitive data
+src/config/database.php
+src/config/config.php
+
+# Build files
+/dist/
+/build/
+
+# Composer
+composer.phar
+composer.lock
+
+# Testing
+/phpunit.xml
+/tests/coverage/ 
