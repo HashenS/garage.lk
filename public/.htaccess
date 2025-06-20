@@ -2,8 +2,8 @@
 RewriteEngine On
 
 # Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Prevent directory listing
 Options -Indexes
@@ -11,6 +11,13 @@ Options -Indexes
 # Add SVG MIME type
 AddType image/svg+xml .svg
 AddType image/svg+xml .svgz
+
+# Add font MIME types for Bootstrap Icons
+<IfModule mod_mime.c>
+    AddType application/font-woff .woff
+    AddType application/font-woff2 .woff2
+    AddCharset utf-8 .woff .woff2
+</IfModule>
 
 # Protect sensitive files
 <FilesMatch "^\.">
